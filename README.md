@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>【 end_4's Hyprland dotfiles for 1366x768 screens ONLY!! 】</h1>
+    <h1>【 end_4's Hyprland dotfiles for ⚠️1366x768 screens ONLY⚠️ 】</h1>
     <h2>if you want normal --> https://github.com/end-4/dots-hyprland/tree/windoes</h2>
     <h3></h3>
 </div>
@@ -66,8 +66,8 @@ _Click the images for a video showcase with animations!_
    - Stuff in `Import manually` folder if you need them
  - Install dependencies
    - See the list in the Dependencies section
-   - Get "Plasma browser integration" extension for your browser
-   - Run `usermod -aG video,audio <USERNAME>` for brightness control to work
+   - ⚠️Get "Plasma browser integration" extension for your browser
+   - ⚠️Run `usermod -aG video,audio <USERNAME>` for brightness control to work
  - Install proprietary font: Segoe UI Variable (for windoes and hybrid branch)
  - **For ARM users**: Compile .cpp scripts in `~/.config/eww/scripts/` (to that folder) (like this: `g++ ~/.config/ewwscripts/SCRIPTNAME.cpp -o ~/.config/eww/scripts/SCRIPTNAME`)
  
@@ -150,3 +150,6 @@ tesseract cliphist grim slurp fuzzel
 # 💡 Some inspirations
  - osu!lazer, Windows 11, Material Design 3, AvdanOS (concept)
 
+##TODO
+- gaps between bottom and window
+- new search button layout
