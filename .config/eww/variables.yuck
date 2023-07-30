@@ -1,7 +1,7 @@
 ; Const vars
 (defvar FILE_BROWSER "nautilus")
-(defpoll RES_WIDTH :initial 1920 :interval "69h" `xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1`)
-(defpoll RES_HEIGHT :initial 1080 :interval "69h" `xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2`)
+(defpoll RES_WIDTH :initial 1366 :interval "69h" `xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1`)
+(defpoll RES_HEIGHT :initial 768 :interval "69h" `xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2`)
 (defvar BG_ZOOM 1.2)
 (defvar OVERVIEW_SCALE 0.18)
 (defvar TASKVIEW_SCALE 0.12)
@@ -68,7 +68,7 @@
 (defvar compact false)
 (defvar resource_metric "cpu")
 (defvar record_sound false)
-(defvar supercontext_pos_x 960)
+(defvar supercontext_pos_x 750)
 (defvar supercontext_pos_y 540)
 (defvar ws_to_swap 0)
 (defvar tray_is_open false)
@@ -148,8 +148,6 @@
 (deflisten cavajson `scripts/cavajson`)
 (deflisten mousepos `scripts/mousetrack`)
 (deflisten taskviewlayout `scripts/taskviewlayout-wrapper`)
-(deflisten lang_ibus :initial "{\"name\":\"English (xkb)\",\"name_abbr\":\"ENG\",\"name_ibus\":\"xkb:us::eng\"}" `scripts/language`)
-(defpoll langs :interval "5m" `cat modules/langs.json | gojq -c -M`)
 (defpoll colormode   :interval "5m" "cat scripts/workdir/__mode_colors.txt")
 (defpoll coloraccent :interval "5m" "cat css/_iconcolor.txt | head -1")
 

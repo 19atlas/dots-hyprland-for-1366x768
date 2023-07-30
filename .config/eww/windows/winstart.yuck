@@ -19,7 +19,7 @@
       :space-evenly false
       :orientation "v"
       :class "winwin-top"
-      :height 113
+      :height 100
       :width 676
       :style "
       ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
@@ -37,7 +37,7 @@
             :reveal {winsearch == ''}
             :halign "start"
             :duration "100ms"
-            (label :class "winstart-search-prompt-text" :xalign 0 :text "Type to search")
+            (label :class "winstart-search-prompt-text" :xalign 0 :text "Aramak için yazın")
           )
         )
         (box
@@ -59,8 +59,8 @@
         :space-evenly false
         :orientation "v"
         :class "winwin-bottom-light"
-        :height 682
-        :width 676
+        :height 536
+        :width 780
         :style "
         ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
         "
@@ -94,7 +94,7 @@
           ; )
         )
         (box
-          :height 627
+          :height 100
           :space-evenly false
           :orientation "h"
           :class "winsearch-pad"
@@ -116,7 +116,7 @@
                   :class "winstart-section winsearch-section"
                   :text "${winsearch_prefix == '' ? 'Results' :
                   (winsearch_prefix == '>load ' ? 'Themes' :
-                    (winsearch_prefix == '1*' ? 'Calculator' : 'Execute'))}"
+                    (winsearch_prefix == '>' ? 'Calculator' : 'Execute'))}"
                 )
               )
               (box
@@ -137,8 +137,8 @@
                       :halign "start"
                       :class "winsearch-result-icon"
                       :path {(result.icon != '' && result.icon != 'null') ? result.icon : 'images/svg/dark/appgeneric.svg'}
-                      :image-width 28
-                      :image-height 28
+                      :image-width 26
+                      :image-height 26
                     )
                   )
                 )
@@ -158,8 +158,8 @@
                   :halign "start"
                   :class "winsearch-result-icon"
                   :path "images/svg/dark/protocol.svg"
-                  :image-width 28
-                  :image-height 28
+                  :image-width 26
+                  :image-height 26
                 )
               )
               (label
@@ -177,8 +177,8 @@
                   :halign "start"
                   :class "winsearch-result-icon"
                   :path "images/svg/dark/search-fluent.svg"
-                  :image-width 28
-                  :image-height 28
+                  :image-width 26
+                  :image-height 26
                 )
               )
             )
@@ -194,12 +194,13 @@
               :space-evenly false
               :class "winsearch-actions-box"
               :width 404
+              :height 100
               (image
                 :halign "center"
                 :class "winsearch-result-icon-big"
                 :path {(winsearch_actions.icon != '' && winsearch_actions.icon != 'null') ? winsearch_actions.icon : 'images/svg/dark/appgeneric.svg'}
-                :image-width 67
-                :image-height 67
+                :image-width 60
+                :image-height 60
               )
               (label
                 :class "winsearch-result-actions-title"
@@ -226,7 +227,7 @@
                     (box
                       :orientation "h"
                       :space-evenly false
-                      :spacing 13
+                      :spacing 12
                       (image
                         :class "winsearch-actions-icon"
                         :path "images/svg/open.svg"
@@ -247,7 +248,7 @@
                     (box
                       :orientation "h"
                       :space-evenly false
-                      :spacing 13
+                      :spacing 10
                       (image
                         :class "winsearch-actions-icon"
                         :path "images/svg/folderopen.svg"
@@ -289,7 +290,7 @@
                     (box
                       :orientation "h"
                       :space-evenly false
-                      :spacing 13
+                      :spacing 12
                       (image
                         :class "winsearch-actions-icon"
                         :path "images/svg/applycolor.svg"
@@ -317,7 +318,7 @@
           :space-evenly false
           :orientation "v"
           :class "winwin-center-noseparator"
-          :height 581
+          :height 80
           :style "
           ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
           "
@@ -335,7 +336,7 @@
                 (box
                   :space-evenly false
                   :orientation "v"
-                  :width 674
+                  :width 684
                   (centerbox
                     :orientation "h"
                     :class "winsearch-section-box"
@@ -351,18 +352,15 @@
                       :onclick "scripts/toggle-allapps.sh --open &"
                       (box
                         :space-evenly false
-                        :spacing 6
-                        (label :text "All apps" :style "padding: 0 2px;")
+                        :spacing 10
+                        (label :text "All apps" :style "padding: 0 6px;")
                         (label :class "winstart-allapps-icon" :text "")
-                        ; (box
-                          ;   :class "winstart-allapps-arrow"
-                        ; )
                       )
                     )
                   )
                   (box
                     :class "winstart-pinnedapps"
-                    :height 293
+                    :height 80
                     :orientation "v"
                     :space-evenly false
                     (for row in pinnedapps
@@ -377,13 +375,13 @@
                               :orientation "v"
                               :space-evenly false
                               :class "winstart-pinnedapps-entry-pad"
-                              :width 101
-                              :height 88
+                              :width 100
+                              :height 90
                               (box
                                 :class "winstart-pinnedapps-icon"
                                 :style "
-                                min-width: 33px;
-                                min-height: 33px;
+                                min-width: 32px;
+                                min-height: 32px;
                                 background-image: url('${app.icon}');
                                 background-position: center;
                                 background-size: auto 100%;
@@ -414,7 +412,7 @@
                   )
                   (box
                     :class "winstart-recommended"
-                    :height 222
+                    :height 20
                     :orientation "v"
                     :space-evenly false
                     :valign "start"
@@ -423,7 +421,7 @@
                         :orientation "h"
                         :space-evenly false
                         :valign "start"
-                        :spacing 20
+                        :spacing 10
                         (for entry in recrow
                           (eventbox
                             :class "winstart-recommended-entry"
@@ -432,8 +430,8 @@
                               :valign "start"
                               :orientation "h"
                               :space-evenly false
-                              :width 286
-                              :height 66
+                              :width 100
+                              :height 16
                               :class "winstart-recommended-entry-pad"
                               ; Recommended tile contents here
                               (box
@@ -474,7 +472,7 @@
                 (box
                   :space-evenly false
                   :orientation "v"
-                  :width 674
+                  :width 600
                   (centerbox
                     :orientation "h"
                     :class "winsearch-section-box"
@@ -500,7 +498,7 @@
                     )
                   )
                   (scroll
-                    :height 549
+                    :height 400
                     (box
                       :space-evenly false
                       :orientation "v"
@@ -540,7 +538,7 @@
         (centerbox
           :orientation "h"
           :class "winwin-bottom winstart-bottom-pad"
-          :height 67
+          :height 60
           (button
             :halign "start"
             :class "winstart-user"
@@ -576,9 +574,8 @@
   :focusable true
   :geometry (geometry
     :x "0px"
-    :y "51px"
-    ; :height 788
-    :width 673
+    :y "50px"
+    :width 674
     :anchor "bottom center"
   )
   (winstart_widget)

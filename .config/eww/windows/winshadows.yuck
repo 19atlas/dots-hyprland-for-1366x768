@@ -5,7 +5,7 @@
     :style "
     ${anim_open_winnotif ? 'transition: 300ms cubic-bezier(0, 1, 0, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
     ${rev_winnotif ? '' : 'margin-right: -700px;'}
-    min-height: 1033px;
+    min-height: 750px;
     "
     (box
       :space-evenly false
@@ -89,7 +89,7 @@
       :space-evenly false
       :orientation "v"
       :class "winwin-top-shadow"
-      :height 113
+      :height 100
       :width 676
       :style "
       ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
@@ -112,8 +112,8 @@
         :space-evenly false
         :orientation "v"
         :class "winwin-bottom-light-shadow"
-        :height 682
-        :width 676
+        :height 532
+        :width 780
         :style "
         ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
         "
@@ -123,7 +123,7 @@
           :space-evenly false
         )
         (box
-          :height 627
+          :height 100
           :space-evenly false
           :orientation "h"
           :class "winsearch-pad"
@@ -148,6 +148,7 @@
               :orientation "v"
               :space-evenly false
               :width 404
+              :height 100
             )
           )
         )
@@ -164,7 +165,7 @@
           :space-evenly false
           :orientation "v"
           :class "winwin-center-noseparator-shadow"
-          :height 600
+          :height 80
           :style "
           ${winsearch != '' ? 'min-width: 811px;' : 'min-width: 676px;'}
           "
@@ -182,7 +183,7 @@
                 (box
                   :space-evenly false
                   :orientation "v"
-                  :width 674
+                  :width 684
                   (centerbox
                     :orientation "h"
                     :class "winsearch-section-box"
@@ -209,7 +210,7 @@
                   )
                   (box
                     :class "winstart-pinnedapps"
-                    :height 293
+                    :height 60
                     :orientation "v"
                     :space-evenly false
                   )
@@ -226,7 +227,7 @@
                   )
                   (box
                     :class "winstart-recommended"
-                    :height 222
+                    :height 20
                     :orientation "v"
                     :space-evenly false
                     :valign "start"
@@ -271,7 +272,7 @@
                     )
                   )
                   (scroll
-                    :height 549
+                    :height 400
                     (box
                       :space-evenly false
                       :orientation "v"
@@ -287,7 +288,7 @@
           :space-evenly false
           :orientation "h"
           :class "winwin-bottom-shadow winstart-bottom-pad"
-          :height 67
+          :height 20
           (box
             :halign "start"
             :space-evenly false
@@ -349,55 +350,7 @@
   )
 )
 
-(defwidget winlang_shadows_widget []
-  (box
-    :space-evenly false
-    :orientation "v"
-    :style "
-    ${anim_open_winlang ? 'transition: 300ms cubic-bezier(0, 1, 0, 1);' : 'transition: 100ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
-    ${rev_winlang ? '' : 'margin-bottom: -700px;'}
-    "
-    (eventbox
-      :onclick "scripts/toggle-winlang.sh --close &"
-      :onmiddleclick "scripts/toggle-winlang.sh --close &"
-      :onrightclick "scripts/toggle-winlang.sh --close &"
-      (box
-        :class "box-that-is-there" :style "min-height: 1px;"
-      )
-    )
-    (box
-      :space-evenly false :orientation "v"
-      :class "winwin-shadow"
-      :width 420
-      (box
-        :space-evenly false :spacing 10
-        :style "padding: 15px;"
-        (label
-          :class "winlang-text"
-        )
-      )
-      (box
-        :space-evenly false :orientation "v"
-        (for language in langs
-          (box
-            :class "winlang-lang-false"
-            :height 84
-          )
-        )
-      )
-      (box
-        :class "winwin-bottom-pad"
-        (box
-          :class "winlang-bottom-button"
-          (label
-            :class "winlang-text"
-            :style "padding: 0 5px;"
-          )
-        )
-      )
-    )
-  )
-)
+
 
 (defwindow winnotif_shadows
   :wm-ignore true
@@ -407,7 +360,7 @@
   :geometry (geometry
     :x "0px"
     :y "51px"
-    :height 1029
+    :height 768
     :anchor "bottom right"
   )
   (winnotif_shadows_widget)
@@ -421,7 +374,7 @@
   :geometry (geometry
     :x "0px"
     :y "51px"
-    :height 1029
+    :height 768
     :anchor "bottom left"
   )
   (winnews_shadows_widget)
@@ -435,8 +388,7 @@
   :geometry (geometry
     :x "0px"
     :y "51px"
-    ; :height 788
-    :width 673
+    :width 674
     :anchor "bottom center"
   )
   (winstart_shadows_widget)
@@ -453,17 +405,4 @@
     :anchor "bottom right"
   )
   (winactions_shadows_widget)
-)
-
-(defwindow winlang_shadows
-  :wm-ignore true
-  :monitor 0
-  :focusable false
-  :namespace "noblur"
-  :geometry (geometry
-    :x "0px"
-    :y "50px"
-    :anchor "bottom right"
-  )
-  (winlang_shadows_widget)
 )

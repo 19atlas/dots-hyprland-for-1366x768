@@ -9,8 +9,8 @@
       :class "module-button-pad-center"
       (image
         :path "images/svg/search.svg"
-        :image-width 33
-        :image-height 33
+        :image-width 32
+        :image-height 32
       )
     )
   )

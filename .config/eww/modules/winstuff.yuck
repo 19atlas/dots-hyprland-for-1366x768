@@ -146,18 +146,3 @@
     )
   )
 )
-
-(defwidget winlang []
-  (eventbox
-    :class "winbarbutton-h${rev_winlang ? '-open' : ''}"
-    :onclick "scripts/toggle-winlang.sh"
-    (box
-      :class "winbutton-pad"
-      (label
-        :class "winbartext"
-        :width 40
-        :text "${lang_ibus.name_abbr}"
-      )
-    )
-  )
-)

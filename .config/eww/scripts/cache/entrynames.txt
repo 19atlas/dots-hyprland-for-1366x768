@@ -1,0 +1,34 @@
+Advanced Network Configuration
+Avahi SSH Server Browser
+Avahi VNC Server Browser
+Avahi Zeroconf Browser
+Code - OSS
+Color Profile Viewer
+Electron 22
+Extensions
+Files
+Firefox Web Browser
+Foot
+Foot Client
+Foot Server
+GTK Settings
+Hardware Locality lstopo
+IBus Preferences
+Icon Browser
+Klipper
+PulseAudio Volume Control
+Qt Assistant
+Qt Designer
+Qt Linguist
+Qt QDBusViewer 
+Qt V4L2 test Utility
+Qt V4L2 video capture utility
+Settings
+Tweaks
+UserFeedback Console
+VLC media player
+Vim
+YAD settings
+btop++
+kitty
+ranger

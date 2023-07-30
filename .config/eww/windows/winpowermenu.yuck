@@ -4,7 +4,7 @@
     :orientation "v"
     :style "
     ${anim_open_winpowermenu ? 'transition: 300ms cubic-bezier(0, 1, 0, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
-    ${rev_winpowermenu ? '' : 'margin-bottom: -700px; margin-top: 700px;'}
+    ${rev_winpowermenu ? '' : 'margin-bottom: -300px; margin-top: 700px;'}
     "
     (eventbox
       :valign "start"
@@ -61,8 +61,8 @@
   :focusable true
   :namespace "noblur"
   :geometry (geometry
-    :x "1140px"
-    :y "126px"
+    :x "900px"
+    :y "110px"
     :width 161
     :anchor "bottom left"
   )

@@ -10,7 +10,7 @@
     )
     (box
       :class "userpic"
-      :style "background-image: url('/var/lib/AccountsService/icons/${username == "" ? username_default : username}');"
+      :style "background-image: url('/var/lib/AccountsService/icons/user.png');"
     )
   )
 )

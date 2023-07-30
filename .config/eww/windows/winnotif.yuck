@@ -4,7 +4,7 @@
     :style "
     ${anim_open_winnotif ? 'transition: 300ms cubic-bezier(0, 1, 0, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
     ${rev_winnotif ? '' : 'margin-right: -700px;'}
-    min-height: 1033px;
+    min-height: 744px;
     "
     (box
       :space-evenly false
@@ -222,7 +222,7 @@
   :geometry (geometry
     :x "0px"
     :y "51px"
-    :height 1029
+    :height 768
     :anchor "bottom right"
   )
   (winnotifs)

@@ -1,5 +1,6 @@
 <div align="center">
-    <h1>【 end_4's Hyprland dotfiles 】</h1>
+    <h1>【 end_4's Hyprland dotfiles for 1366x768 screens ONLY!! 】</h1>
+    <h2>if you want normal --> https://github.com/end-4/dots-hyprland/tree/windoes</h2>
     <h3></h3>
 </div>
 
@@ -66,7 +67,7 @@ _Click the images for a video showcase with animations!_
  - Install dependencies
    - See the list in the Dependencies section
    - Get "Plasma browser integration" extension for your browser
-   - Run `usermod -aG video <USERNAME>` for brightness control to work
+   - Run `usermod -aG video,audio <USERNAME>` for brightness control to work
  - Install proprietary font: Segoe UI Variable (for windoes and hybrid branch)
  - **For ARM users**: Compile .cpp scripts in `~/.config/eww/scripts/` (to that folder) (like this: `g++ ~/.config/ewwscripts/SCRIPTNAME.cpp -o ~/.config/eww/scripts/SCRIPTNAME`)
  
@@ -108,10 +109,14 @@ _Click the images for a video showcase with animations!_
 [ Command ]
 pip install pywal desktop_entry_lib poetry build Pillow
 ```
+or pip for system-wide:
+```
+pacman -S python-pywal python-desktop_entry_lib python-poetry python-build python-pillow
+```
  - Normal dependencies
 ```
 [ Possible package names (normal stuff) ]
-bc blueberry bluez boost boost-libs coreutils dunst findutils fzf gawk gnome-control-center ibus imagemagick libqalculate light networkmanager network-manager-applet nlohmann-json pavucontrol plasma-browser-integration playerctl procps ripgrep socat sox udev upower util-linux xrandr wget wireplumber yad
+bc blueberry bluez boost boost-libs coreutils dunst findutils fzf gawk gnome-control-center ibus imagemagick libqalculate light networkmanager network-manager-applet nlohmann-json pavucontrol plasma-browser-integration playerctl procps ripgrep socat sox udev upower util-linux xrandr wget wireplumber yad nwg-look
 [ Command for: Fedora (INCOMPLETE command; so there's less name hunting for you) ]
 sudo dnf install bc blueberry bluez coreutils dunst findutils gawk gojq ImageMagick light NetworkManager network-manager-applet pavucontrol plasma-browser-integration playerctl procps ripgrep socat udev upower util-linux wget wireplumber wlogout qalc sox nlohmann-json-devel
 ```

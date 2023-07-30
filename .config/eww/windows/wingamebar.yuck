@@ -3,12 +3,12 @@
     :space-evenly false
     :orientation "v"
     :class "thewholething"
-    :height 1080
-    :width 1920
+    :height 768
+    :width 1366
     (overlay
       (box
-        :height 1080
-        :width 1920
+        :height 768
+        :width 1366
         :class "wingamebar-overlay"
       )
       ; Controls

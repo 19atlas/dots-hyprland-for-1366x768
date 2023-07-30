@@ -7,12 +7,12 @@
 (include "./modules/clock.yuck")
 (include "./modules/editmode.yuck")
 (include "./modules/music.yuck")
-; (include "./modules/net.yuck")
+(include "./modules/net.yuck")
 (include "./modules/searchbutton.yuck")
 (include "./modules/sys.yuck")
 (include "./modules/taskbar.yuck")
 (include "./modules/user.yuck")
-; (include "./modules/volume.yuck")
+(include "./modules/volume.yuck")
 (include "./modules/winstuff.yuck")
 (include "./modules/workspaces.yuck")
 
@@ -29,7 +29,7 @@
 (include "./windows/osd.yuck")
 (include "./windows/osettings.yuck")
 (include "./windows/onotify.yuck")
-; (include "./windows/system-menu.yuck")
+(include "./windows/system-menu.yuck")
 (include "./windows/supercontext.yuck")
 (include "./windows/themer.yuck")
 
@@ -37,7 +37,6 @@
 (include "./windows/winactions.yuck")
 (include "./windows/winbsod.yuck")
 (include "./windows/wingamebar.yuck")
-(include "./windows/winlang.yuck")
 (include "./windows/winnews.yuck")
 (include "./windows/winnotif.yuck")
 (include "./windows/winosd.yuck")
@@ -177,7 +176,7 @@
             :reveal false
             :transition "slideright"
             (label
-              :text "${lang_ibus.name_abbr} ${activews} ${mcover.source} ${mname_win.title} ${net.level} ${brightness.level} ${wsjsona[0][0].at} ${wsjsonb[0][0].at}" ; Dummy to keep listeners active
+              :text "${activews} ${mcover.source} ${mname_win.title} ${net.level} ${brightness.level} ${wsjsona[0][0].at} ${wsjsonb[0][0].at}" ; Dummy to keep listeners active
             )
           )
         )
@@ -190,7 +189,6 @@
       :halign "end"
       :space-evenly false
       (wintray-button)
-      (winlang)
       (winactions)
       (windate)
     )
@@ -221,9 +219,7 @@
     :x "0%"
     :y "0%"
     :width "100%"
-    ; :height "53px"
-    ; :width "53px"
-    ; :height "100%"
+    :height "54px"
     :anchor "bottom center"
   )
   ; :stacking "fg"

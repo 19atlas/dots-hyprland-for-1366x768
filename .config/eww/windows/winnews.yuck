@@ -34,7 +34,7 @@
   (box
     :orientation "v" :space-evenly false
     :width {RES_WIDTH / 2}
-    :height {RES_HEIGHT - 51}
+    :height {RES_HEIGHT - 52}
     :style "
     ${anim_open_winnews ? 'transition: 300ms cubic-bezier(0, 1, 0, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
     ${rev_winnews ? '' : 'margin-left: -960px; margin-right: 960px;'}
@@ -48,16 +48,16 @@
       )
     )
     (box :space-evenly false :orientation "v"
-      :width {RES_WIDTH / 2 - 24}
-      :height {RES_HEIGHT - 51}
+      :width {RES_WIDTH / 2 - 12}
+      :height {RES_HEIGHT - 52}
       :class "winwin"
       (centerbox
         :class "winnews-topbar"
-        :height 35
-        (box :space-evenly false :height 35
+        :height 34
+        (box :space-evenly false :height 32
           (label :class "winnews-clock" :text "Widgets")
         )
-        (box :space-evenly false :height 35
+        (box :space-evenly false :height 32
           (overlay
             (box :space-evenly false
               :class "winnews-search-prompt"
@@ -94,7 +94,7 @@
         )
       )
       (scroll
-        :height 930
+        :height 620
         (box :orientation "h" :spacing 12
           :class "winnews-widgets"
           (box :orientation "v" :spacing 12 :space-evenly false
@@ -695,7 +695,7 @@
   :monitor 0
   :geometry (geometry
     :width "50%"
-    ; :height "0%"
+    :height "0%"
     :anchor "top left"
   )
   (winnews_widget)

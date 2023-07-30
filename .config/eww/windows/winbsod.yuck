@@ -3,11 +3,11 @@
     :space-evenly false
     :orientation "v"
     :class "thewholething"
-    :height 1080
-    :width 1920
+    :height 768
+    :width 1366
     (box
-      :height 1080
-      :width 1920
+      :height 768
+      :width 1366
       :class "winbsod-background"
       (box
         :orientation "v"
@@ -15,7 +15,7 @@
         :halign "start" :valign "start"
         :style "
         margin-left: 200px;
-        margin-top: 115px;
+        margin-top: 10px;
         "
         (label :xalign 0
           :class "winbsod-text winbsod-face"
