@@ -14,18 +14,7 @@
 </div>
 
 # ✨ Cool stuff
- <details open> 
-  <summary>Notable features</summary>
-    
-  - An overview widget that shows window positions in workspaces + app search (GNOME overview replacement)
-  - `hybrid` branch: Can toggle Windows 11-like mode hehee
-</details>
-<details open> 
-  <summary>Details</summary>
-    
-  - Pywal and [Material You](https://m3.material.io/styles/color/the-color-system/key-colors-tones) colors
-  - Sexy animations
-</details>
+looks like windows 11 woah!!
  <details> 
   <summary>Bragging</summary>
      
